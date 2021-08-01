@@ -142,3 +142,41 @@ nav a:hover {
 .modal {
     color: black;
 }
+
+.delivery-options {
+    margin-top: 10px;
+  }
+  
+  .checkout-comp {
+    margin-top: 30px !important;
+  }
+  
+  .checkout-comp button {
+    margin: auto;
+  }
+
+  .quantity_picker:hover {
+    color: #d92e3a;
+  }
+  
+  .minus {
+    margin-right: 10px;
+  }
+  
+  .plus {
+    margin-left: 10px;
+  }
+  
+  .r-text {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .remove-item {
+    margin: 5px;
+  }
+  
+  .remove-item:hover {
+    color: #d92e3a;
+    cursor: pointer;
+  }
