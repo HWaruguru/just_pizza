@@ -92,6 +92,9 @@ function getTableRow(name, cost, quantity) {
 
 $(document).ready(function () {
     order = new Order()
+    if (order.cart.length === 0) {
+        $(".open-cart").prop('disabled', true);
+    }
     $('.minus').click(function() {
         if(parseInt($('.number').text()) > 1) {
             $('.number').text(parseInt($('.number').text()) - 1)
@@ -117,6 +120,7 @@ $(document).ready(function () {
                     cost = getOrderCost(form_data)
                     name = modalTitle + " - " + size
                     order.addItem(name, cost, quantity)
+                    $(".open-cart").prop('disabled', false);
                     target = getTableRow(name, cost, quantity)
                     $('#products').text(order.cart.length + " item(s)")
                     $('#total-cost').html("<br /> Total: Ksh " + order.getTotal())
@@ -133,14 +137,39 @@ $(document).ready(function () {
         });
     });
 
+    $(".open-cart").click(function () {
+        $('.delivery-options').hide()
+        if (order.cart.length > 0) {
+            order.cart.forEach(item => {
+                quantity = item.quantity
+                cost = item.price
+                name = item.name
+                target = getTableRow(name, cost, quantity)
+                $('#cart-summary tr:last').before(target)
+                $('#total').text("Ksh " + order.getTotal())
+            });
+        }
+    });
+
     $(document).on('click', '.remove-item', function(){
         itemRow = this.closest('tr')
         name = $(itemRow).find('.item-name').text().trim()
         cost = $(itemRow).find('.item-price').text().trim().split(" ")[1]
         quantity = $(itemRow).find('.item-quantity').text().trim()
-        order.removeItem(name, parseInt(cost) / quantity, parseInt(quantity))
+        order.removeItem(name, parseInt(cost), parseInt(quantity))
         itemRow.remove()
-        $('#total-cost').text("Ksh " + order.getTotal())
+        $('#total').text("Ksh " + order.getTotal())
+
+        if (order.cart.length === 0) {
+            $(".open-cart").prop('disabled', true);
+            $(".checkout").prop('disabled', true);
+            $('#products').text("Cart is empty")
+            $('#total-cost').html("")
+        } else {
+            $(".checkout").prop('disabled', false);
+            $('#products').text(order.cart.length + " item(s)")
+            $('#total-cost').html("<br /> Total: Ksh " + order.getTotal())
+        }
     })
 
     deliver_price = 0
@@ -170,4 +199,6 @@ $(document).ready(function () {
         }
         location = 'index.html'
     })
+
+
 })
