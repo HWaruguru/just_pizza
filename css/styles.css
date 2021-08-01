@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    background-image: url('../images/pizza.jpeg');
+    color: white;
+}
+
+.pizzaImages{
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: black;
+}
+
+.carousel-inner {
+    max-height: 70vh !important;
+  }
+  
+  .menu {
+      background-color: white;
+      height: auto;
+  }
+
+  h3{
+      color: green;
+      text-decoration: underline;
+      text-align: center;
+  }
+  
+  .card-deck {
+    margin: 5px;
+  }
+
+  .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      text-align: center;
+  }
+
+  .card-title {
+      color: green;
+  }
+
+  .card-text {
+      color: black;
+  }
+
+  .add-cart {
+      max-width: 40%;
+  }
