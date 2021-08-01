@@ -5,6 +5,8 @@ body{
 }
 .navbar {
     background-color: black !important;
+    padding: 30px;
+    text-align: center;
     
 }
 
@@ -94,7 +96,7 @@ nav a:hover {
 
 .inside-contacts {
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -116,4 +118,12 @@ nav a:hover {
     width: 38px;
     font-size: 30px;
     color: goldenrod;
+}
+
+.about-wrap {
+    background-color: white;
+    color: black;
+    height: auto;
+    text-align: justify;
+    padding: 40px;
 }
