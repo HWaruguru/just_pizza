@@ -16,14 +16,21 @@ body{
   }
   
   .menu {
-      background-color: white;
+    height: auto;
+    margin-top: 20px;
+}
+
+  .meaty {
       height: auto;
+      margin-top: 20px;
+      background-color: white;
   }
 
-  h3{
+  h3 {
       color: green;
       text-decoration: underline;
       text-align: center;
+      margin-top: 20px;
   }
   
   .card-deck {
@@ -48,4 +55,22 @@ body{
 
   .add-cart {
       max-width: 40%;
+      margin: 10px;
   }
+
+  .separate{
+      background: none;
+      height: 20px;
+  }
+
+  .chicken {
+    height: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.vegetable {
+    height: auto;
+    margin-top: 20px;
+    background-color: white;
+}
