@@ -3,6 +3,24 @@ body{
     background-image: url('../images/pizza.jpeg');
     color: white;
 }
+.navbar {
+    background-color: black !important;
+    
+}
+
+.brand {
+    font-size: 30px !important;
+    font-weight: bolder;
+    color: goldenrod !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+nav a:hover {
+    color: goldenrod !important;
+  } 
 
 .pizzaImages{
     background-position: center;
@@ -17,12 +35,10 @@ body{
   
   .menu {
     height: auto;
-    margin-top: 20px;
 }
 
   .meaty {
       height: auto;
-      margin-top: 20px;
       background-color: white;
   }
 
@@ -33,10 +49,6 @@ body{
       margin-top: 20px;
   }
   
-  .card-deck {
-    margin: 5px;
-  }
-
   .card {
       display: flex;
       justify-content: center;
@@ -56,6 +68,7 @@ body{
   .add-cart {
       max-width: 40%;
       margin: 10px;
+      background-color: black;
   }
 
   .separate{
@@ -65,12 +78,42 @@ body{
 
   .chicken {
     height: auto;
-    margin-top: 20px;
     background-color: white;
 }
 
 .vegetable {
     height: auto;
-    margin-top: 20px;
     background-color: white;
+}
+
+.contacts {
+    background-color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.inside-contacts {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.time {
+    color: darkgoldenrod;
+}
+
+.ig {
+    margin-right: 20px;
+    margin-left: 20px;
+    color: red;
+}
+
+.twitter {
+    color: darkgoldenrod;
+}
+
+.just-pizza-icon {
+    width: 38px;
+    font-size: 30px;
+    color: goldenrod;
 }
