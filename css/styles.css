@@ -23,7 +23,8 @@ body{
 nav a:hover {
     color: goldenrod !important;
   } 
-.cart {
+
+.cart-icon {
     font-size: 30px;
     color: goldenrod !important;
     margin-right: 5px;
