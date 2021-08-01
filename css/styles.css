@@ -23,6 +23,11 @@ body{
 nav a:hover {
     color: goldenrod !important;
   } 
+.cart {
+    font-size: 30px;
+    color: goldenrod !important;
+    margin-right: 5px;
+}
 
 .pizzaImages{
     background-position: center;
