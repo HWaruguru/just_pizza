@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Just Pizza</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        
+    </head>
+
+<body>
+  <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <i class="fas fa-pizza-slice just-pizza-icon"></i>
+        <a class="navbar-brand brand" href="./index.html">JUST PIZZA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html#menu">MENU<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ORDER ONLINE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contacts">CONTACTS</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="separate"></div>
+  
+    <div class="row order-contents">
+        <!-- table -->
+      <div class="col-md-6 order-rows">
+        <div class="row">
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th>
+                  <h4 class="chicken">Chicken</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Chicken Tikka</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Chicken Tikka">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Chicken Periperi</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Chicken Periperi">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Chicken BBQ</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Chicken BBQ">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Chicken Mushroom</th>
+
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Chicken Mushroom">Add Pizza</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sep"></div>
+        <div class="row">
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th>
+                  <h4 class="chicken">Meaty</h4>
+                </th>
+              </tr>
+
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">BBQ</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Meaty - BBQ">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Steak</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Meaty - Steak">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Mexican Fiesta</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Mexican Fiesta">Add Pizza</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Bacon Cheesy</th>
+
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Bacon Cheesy">Add Pizza</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sep"></div>
+        <div class="row">
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th>
+                  <h4 class="chicken">Vegeterian</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Mediterranean</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Mediterranean">Add Pizza</button></td>
+
+              </tr>
+              <tr>
+                <th scope="row">Margherita</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Margherita">Add Pizza</button></td>
+
+              </tr>
+              <tr>
+                <th scope="row">Grilled eggplant</th>
+                <td><button class="add-pizza" type="button" data-toggle="modal" data-target="#modal"
+                    class="btn btn-primary" value="Grilled eggplant">Add Pizza</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sep"></div>
+      </div>
+
+<!-- cart summary -->
+
+      <div class="col-md-6 order-rows">
+        <div class="row">
+          <table id="cart-summary" class="table table-sm">
+            <thead>
+              <th>
+                <h4>Cart Summary</h4>
+              </th>
+              </tr>
+              <tr>
+                <th>
+                  <span>Name</span>
+                </th>
+                <th>
+                  <span>Quantity</span>
+                </th>
+                <th>
+                  <span>Cost</span>
+                </th>
+              </tr>
+              <tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <div class="row"> Total</div>
+                </th>
+                <td class="placeholder"></td>
+                <td id="total-cost"> Ksh 0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <label class="form-check-label" for="delivery1">
+              Do You want the order to be delivered?
+            </label>
+          </div>
+          <div class="col-md-4">
+            <input id="delivery1" class="form-check-input" type="checkbox" name="size" id="delivery1">
+          </div>
+        </div>
+        <div class="delivery-options">
+          <div class="row sep"></div>
+          <div class="row">
+            <div class="col-md-8">
+              <label class="form-check-label" for="delivery2">
+                Within CBD - Free
+              </label>
+            </div>
+            <div class="col-md-4">
+              <input class="form-check-input d-location" type="radio" value="CBD-0" name="size" id="delivery2">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <label class="form-check-label" for="delivery3">
+                Ruaka - Ksh 100
+              </label>
+            </div>
+            <div class="col-md-4">
+              <input class="form-check-input d-location" type="radio" value="Ruaka-100" name="size" id="delivery3">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <label class="form-check-label" for="delivery4">
+                Kileleshwa - Ksh 200
+              </label>
+            </div>
+            <div class="col-md-4">
+              <input class="form-check-input d-location" type="radio" value="Kileleshwa-200" name="size" id="delivery4">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <label class="form-check-label" for="delivery5">
+                Ngong - Ksh 200
+              </label>
+            </div>
+            <div class="col-md-4">
+              <input class="form-check-input d-location" type="radio" name="size" value="Ngong-200" id="delivery5">
+            </div>
+          </div>
+        </div>
+        <div class="row checkout-comp">
+          <button type="button" class="btn btn-primary checkout">Checkout</button>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Chicken Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row modal-section">
+                  <label for="inputSize" class="col-sm-2 col-form-label">Size</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="size" id="gridRadios1"
+                                value="small-600">
+                              <label class="form-check-label" for="gridRadios1">
+                                Small
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 600</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="size" id="gridRadios1"
+                                value="medium-750">
+                              <label class="form-check-label" for="gridRadios1">
+                                Medium
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 750</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="size" id="gridRadios1"
+                                value="large-950">
+                              <label class="form-check-label" for="gridRadios1">
+                                Large
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 950</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row modal-section">
+                  <label for="inputSize" class="col-sm-2 col-form-label">Crust</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="crust" id="gridRadios2" value="0">
+                              <label class="form-check-label" for="gridRadios2">
+                                Thin
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 0</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="crust" id="gridRadios2" value="50">
+                              <label class="form-check-label" for="gridRadios2">
+                                Thick
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 50</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="radio" name="crust" id="gridRadios2" value="100">
+                              <label class="form-check-label" for="gridRadios2">
+                                Double Stack
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 100</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row modal-section">
+                  <label for="inputSize" class="col-sm-2 col-form-label">Extra Toppings</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="checkbox" name="et" id="gridRadios3" value="50">
+                              <label class="form-check-label" for="gridRadios3">
+                                Green Pepper
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 50</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="checkbox" name="et" id="gridRadios3" value="50">
+                              <label class="form-check-label" for="gridRadios3">
+                                Mushroom
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 50</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="checkbox" name="et" id="gridRadios3" value="50">
+                              <label class="form-check-label" for="gridRadios3">
+                                Pineapple
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 50</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input class="form-check-input" type="checkbox" name="et" id="gridRadios3" value="50">
+                              <label class="form-check-label" for="gridRadios3">
+                                Onions
+                              </label>
+                            </div>
+                            <div class="col-md-4">
+                              <span>Ksh 50</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row modal-section">
+                  <label for="inputSize" class="col-sm-2 col-form-label">How many</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <div class="row">
+                          <span class="quantity_picker minus"><i class="fas fa-minus"></i></span>
+                          <span class="number">1</span>
+                          <span class="quantity_picker plus"><i class="fas fa-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button id="add-cart" type="button" class="btn btn-primary" data-dismiss="modal">Add to Cart</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal -->
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+        <script src="js/scripts.js"></script> 
+</body>
+
+</html>
